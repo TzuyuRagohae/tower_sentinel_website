@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tower Sentinel: Dashboard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+
+  body { margin: 0; background: #0A0E17; }
+  .ts-nav-item:hover { background: #111A27; }
+  .ts-tower-card:hover { border-color: #2DD4BF; }
+
+</style>
+</head>
+<body style="margin:0; background:#05070c; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; box-sizing:border-box; overflow-x:auto">
+<div style="width: 1440px; height: 960px; flex-shrink: 0; box-sizing: border-box; background: #0A0E17; color: #E6EDF3; font-family: 'IBM Plex Sans', sans-serif; display: flex; overflow: hidden">
+
+  <!-- SIDEBAR -->
+  <div style="width: 220px; flex-shrink: 0; background: #080b12; border-right: 1px solid #16283D; display: flex; flex-direction: column; padding: 28px 0">
+    <a href="index.html" style="display: flex; align-items: center; gap: 10px; padding: 0 24px 32px; text-decoration: none">
+      <div style="width: 12px; height: 12px; background: #2DD4BF; border-radius: 3px; transform: rotate(45deg)"></div>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; color: #E6EDF3">SENTINEL</span>
+    </a>
+    <div class="ts-nav-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 24px; background: #111A27; border-left: 2px solid #2DD4BF">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #E6EDF3; font-weight: 600">Overview</span>
+    </div>
+    <div class="ts-nav-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 24px; border-left: 2px solid transparent">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8AA0B8">Towers</span>
+    </div>
+    <div class="ts-nav-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 24px; border-left: 2px solid transparent">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8AA0B8">Alerts</span>
+      <span style="background: #F14C4C; color: #0A0E17; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 100px; font-family: 'JetBrains Mono', monospace">1</span>
+    </div>
+    <div class="ts-nav-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 24px; border-left: 2px solid transparent">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8AA0B8">Work Orders</span>
+    </div>
+    <div class="ts-nav-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 24px; border-left: 2px solid transparent">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8AA0B8">Settings</span>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex: 1; display: flex; flex-direction: column; min-width: 0">
+
+    <!-- TOP BAR -->
+    <div style="height: 64px; flex-shrink: 0; border-bottom: 1px solid #16283D; display: flex; align-items: center; justify-content: space-between; padding: 0 32px">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 1px; color: #3DDC84">SYSTEM: QC-NETWORK &nbsp;|&nbsp; STATUS: <span style="color: #E6EDF3">16/17 TOWERS NOMINAL</span></span>
+      <div style="display: flex; align-items: center; gap: 16px">
+        <div style="background: #1a0f10; border: 1px solid #F14C4C; border-radius: 6px; padding: 6px 14px; display: flex; align-items: center; gap: 8px">
+          <div style="width: 7px; height: 7px; border-radius: 50%; background: #F14C4C"></div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #F14C4C; font-weight: 600">1 ALERT</span>
+        </div>
+        <div style="width: 32px; height: 32px; border-radius: 50%; background: #23384A; display: flex; align-items: center; justify-content: center">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8AA0B8">QC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div style="flex: 1; padding: 28px 32px; display: flex; flex-direction: column; gap: 24px; overflow: hidden">
+
+      <!-- KPI ROW -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px">
+        <div style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5A7185; letter-spacing: 1px">TOWERS HEALTHY</span>
+          <span style="font-family: 'Oswald', sans-serif; font-size: 30px; font-weight: 600; color: #3DDC84">16 / 17</span>
+        </div>
+        <div style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5A7185; letter-spacing: 1px">ACTIVE ALERTS</span>
+          <span style="font-family: 'Oswald', sans-serif; font-size: 30px; font-weight: 600; color: #F14C4C">1</span>
+        </div>
+        <div style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5A7185; letter-spacing: 1px">OPEN WORK ORDERS</span>
+          <span style="font-family: 'Oswald', sans-serif; font-size: 30px; font-weight: 600; color: #F5A623">1</span>
+        </div>
+        <div style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5A7185; letter-spacing: 1px">RECOVERABLE / MONTH</span>
+          <span style="font-family: 'Oswald', sans-serif; font-size: 30px; font-weight: 600; color: #2DD4BF">QAR 1.2M</span>
+        </div>
+      </div>
+
+      <!-- TOWER GRID + DETAIL -->
+      <div style="flex: 1; display: flex; gap: 20px; min-height: 0">
+
+        <!-- Tower grid -->
+        <div style="flex: 1.1; display: flex; flex-direction: column; gap: 12px; min-width: 0">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8AA0B8; letter-spacing: 1px">TOWER STATUS: NETWORK</span>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+            <div class="ts-tower-card" style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600">Tower A</span><div style="width: 8px; height: 8px; border-radius: 50%; background: #3DDC84"></div></div>
+              <span style="font-size: 12px; color: #5A7185">ΔT 96% of design</span>
+            </div>
+            <div class="ts-tower-card" style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600">Tower B</span><div style="width: 8px; height: 8px; border-radius: 50%; background: #3DDC84"></div></div>
+              <span style="font-size: 12px; color: #5A7185">ΔT 94% of design</span>
+            </div>
+            <div class="ts-tower-card" style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600">Tower C</span><div style="width: 8px; height: 8px; border-radius: 50%; background: #F5A623"></div></div>
+              <span style="font-size: 12px; color: #5A7185">ΔT 87% of design</span>
+            </div>
+            <div class="ts-tower-card" style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600">Tower D</span><div style="width: 8px; height: 8px; border-radius: 50%; background: #3DDC84"></div></div>
+              <span style="font-size: 12px; color: #5A7185">ΔT 95% of design</span>
+            </div>
+            <div class="ts-tower-card" style="background: #1a0f10; border: 1px solid #F14C4C; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: #F14C4C">Tower E</span><div style="width: 8px; height: 8px; border-radius: 50%; background: #F14C4C"></div></div>
+              <span style="font-size: 12px; color: #F14C4C">ΔT 58% of design, SHORTFALL</span>
+            </div>
+            <div class="ts-tower-card" style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600">Tower F</span><div style="width: 8px; height: 8px; border-radius: 50%; background: #3DDC84"></div></div>
+              <span style="font-size: 12px; color: #5A7185">ΔT 97% of design</span>
+            </div>
+          </div>
+
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8AA0B8; letter-spacing: 1px; margin-top: 8px">WORK ORDER QUEUE</span>
+          <div style="background: #111A27; border: 1px solid #23384A; border-radius: 10px; overflow: hidden">
+            <div style="display: grid; grid-template-columns: 2fr 1.4fr 1fr 1fr; padding: 10px 16px; background: #16283D">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8AA0B8">ISSUE</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8AA0B8">TOWER</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8AA0B8">PREDICTED</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8AA0B8">STATUS</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 2fr 1.4fr 1fr 1fr; padding: 12px 16px; align-items: center; border-top: 1px solid #23384A">
+              <span style="font-size: 13px; color: #E6EDF3">Valve position drift, MV-01/03/05</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8AA0B8">Tower E</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8AA0B8">Auto-flagged</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #F14C4C; font-weight: 600">OPEN</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail panel -->
+        <div style="flex: 0.9; background: #111A27; border: 1px solid #F14C4C; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 18px; min-width: 0">
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600; color: #E6EDF3">Tower E</span>
+            <span style="background: #1a0f10; border: 1px solid #F14C4C; color: #F14C4C; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; letter-spacing: 0.5px">CRITICAL</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5A7185; letter-spacing: 1px">ΔT TREND, LAST 6 READINGS</span>
+            <div style="display: flex; align-items: flex-end; gap: 8px; height: 90px">
+              <div style="width: 100%; height: 70%; background: #F14C4C; opacity: 0.5; border-radius: 4px 4px 0 0"></div>
+              <div style="width: 100%; height: 62%; background: #F14C4C; opacity: 0.6; border-radius: 4px 4px 0 0"></div>
+              <div style="width: 100%; height: 58%; background: #F14C4C; opacity: 0.7; border-radius: 4px 4px 0 0"></div>
+              <div style="width: 100%; height: 50%; background: #F14C4C; opacity: 0.8; border-radius: 4px 4px 0 0"></div>
+              <div style="width: 100%; height: 46%; background: #F14C4C; border-radius: 4px 4px 0 0"></div>
+              <div style="width: 100%; height: 40%; background: #F14C4C; border-radius: 4px 4px 0 0"></div>
+            </div>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A7185">Declining. Drift trend crosses threshold in about 11 days</span>
+          </div>
+
+          <div style="height: 1px; background: #23384A"></div>
+
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5A7185; letter-spacing: 1px">ROOT CAUSE</span>
+            <span style="font-size: 14px; color: #E6EDF3">MV-01, MV-03, MV-05 fault status</span>
+          </div>
+
+          <div style="background: #0d1b1c; border: 1px solid #2DD4BF; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #7FF5E3; font-weight: 700; letter-spacing: 0.5px">WORK ORDER AUTO-GENERATED</span>
+            <span style="font-size: 13px; color: #cfe9e6">Predicted valve failure window: 11 days. Ticket #TE-0142 opened automatically, with no operator action required to flag it.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
